@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MainEx01.c                                         :+:      :+:    :+:   */
+/*   MainEx02.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rthys <rthys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,19 +12,21 @@
 
 #include <stdio.h>
 
-int		*ft_range(int min, int max);
+int		ft_ultimate_range(int **range, int min, int max);
 
 int		main(void)
 {
 	int i;
-	int *tab;
+	int ret;
+	int	*tab;
 
 	i = 0;
-	tab = ft_range(5, 10);
+	ret = ft_ultimate_range(&tab, 5, 10);
 	while (i < 5)
 	{
 		printf("Tab[%d] = %d\n", i, tab[i]);
 		i++;
 	}
+	printf("Retour de la fonction = %d\n", ret);
 	return (0);
 }
