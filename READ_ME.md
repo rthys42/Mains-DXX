@@ -3,7 +3,7 @@
 
 
 Ne contient pas de Mains pour chaque jour, encore moins pour chaque exercice des Jours pushés.
-Il n'y a pas de mains pour les [i]"42Classics"[/i].
+Il n'y a pas de mains pour les "42Classics".
 
 Il est toujours mieux de coder vos propres Mains, ceux-là servent juste d'appoint.
 
@@ -15,7 +15,7 @@ Merci!
 
 
 Doesn't contain Mains for every Day, not even for every exercices on pushed Days.
-No mains for [i]"42Classics"[/i].
+No mains for "42Classics".
 
 It's always better to do your own Mains, just use these as tools.
 
