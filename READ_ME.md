@@ -1,7 +1,7 @@
 # Mains-DXX
 "Mains pour Piscine 42"
 
-Doesn't contain Mains for every day, not even for every exercices on pushed Days.
+Doesn't contain Mains for every Day, not even for every exercices on pushed Days.
 
 It's always better to do your own Mains, just use these as tools.
 
