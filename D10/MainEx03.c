@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MainEx02.c                                         :+:      :+:    :+:   */
+/*   MainEx03.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rthys <rthys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/12 19:04:56 by rthys             #+#    #+#             */
-/*   Updated: 2016/09/13 15:13:22 by rthys            ###   ########.fr       */
+/*   Updated: 2016/09/13 15:12:32 by rthys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,43 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int		*ft_map(int *tab, int length, int (*f)(int));
+int		ft_any(char **tab, int (*f)(char *));
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-int		ft_times(int nbr)
+int		ft_even(char *str)
 {
-	nbr = nbr * 2;
-	return (nbr);
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o'
+				|| str[i] == 'u' || str[i] == 'y')
+			i++;
+		else if (str[i] == 'A' || str[i] == 'E' || str[i] == 'I'
+					|| str[i] == 'O' || str[i] == 'U' || str[i] == 'Y')
+			i++;
+		else if (str[i] == '.' || str[i] == '/')
+			i++;
+		else
+			return (0);
+	}
+	return (1);
 }
 
-int		main(void)
+int		main(int argc, char **argv)
 {
-	int		*tab;
-	int		length;
-	int		*ret;
-	int		(*funtimes)(int);
-	int		i;
+	int		(*funeven)(char *);
 
-	length = 3;
-	i = 0;
-	tab = (int *)malloc(sizeof(int) * length);
-	tab[0] = 1;
-	tab[1] = 2;
-	tab[2] = 3;
-	funtimes = &ft_times;
-	ret = ft_map(tab, length, funtimes);
-	while (i < length)
-	{
-		printf("Tab[%d] = %d\n", i, ret[i]);
-		i++;
-	}
+	funeven = &ft_even;
+	(void)argc;
+	if (ft_any(argv, funeven) == 1)
+		printf("Que des voyelles!\n");
+	else
+		printf("Il y a des consonnes...\n");
 	return (0);
 }
