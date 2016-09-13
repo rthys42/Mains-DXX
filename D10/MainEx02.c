@@ -6,7 +6,7 @@
 /*   By: rthys <rthys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/12 19:04:56 by rthys             #+#    #+#             */
-/*   Updated: 2016/09/13 14:34:51 by rthys            ###   ########.fr       */
+/*   Updated: 2016/09/13 14:37:50 by rthys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int		main(void)
 	int		length;
 	int		*ret;
 	int		(*funtimes)(int);
-	int i;
-	
+	int 	i;
+
 	length = 3;
 	i = 0;
 	tab = (int *)malloc(sizeof(int) * length);
