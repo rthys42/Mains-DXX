@@ -6,7 +6,7 @@
 /*   By: rthys <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/13 15:47:16 by rthys             #+#    #+#             */
-/*   Updated: 2016/09/13 15:49:36 by rthys            ###   ########.fr       */
+/*   Updated: 2016/09/14 16:49:29 by rthys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ t_list	*ft_create_elem(void *data); // Retirez la ligne si le prototype est dans
 int		main(void)
 {
 	t_list	*new_elem;
-	void	*data;
 
-	data = "ESTAAAAAANAMIGO";
-	new_elem = ft_create_elem(data);
-	printf("Doit afficher 0x0 = %p\n", new_elem->next);
+	new_elem = ft_create_elem("ESTAAAAAANAMIGO");
+	printf("Doit afficher ESTAAAAAANAMIGO = %s\n", (char *)new_elem->data);
 	return (0);
 }
